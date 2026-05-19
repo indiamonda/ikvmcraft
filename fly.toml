@@ -1,0 +1,25 @@
+app = "ikvmcraft"
+primary_region = "iad"
+
+[build]
+  builder = "docker"
+
+[deploy]
+  release_command = "make publish"
+
+[[services]]
+  internal_port = 8080
+  protocol = "http"
+
+  [services.concurrency]
+    hard_limit = 100
+    soft_limit = 80
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.checks]]
+    path = "/"
+    interval = "10s"
+    timeout = "2s"
