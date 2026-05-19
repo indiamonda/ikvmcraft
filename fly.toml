@@ -1,12 +1,6 @@
 app = "ikvmcraft"
 primary_region = "iad"
 
-[build]
-  builder = "docker"
-
-[deploy]
-  release_command = "make publish"
-
 [[services]]
   internal_port = 8080
 
