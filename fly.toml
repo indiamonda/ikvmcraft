@@ -1,6 +1,9 @@
 app = "ikvmcraft"
 primary_region = "iad"
 
+[build]
+  builder = "docker"
+
 [[services]]
   internal_port = 8080
 
