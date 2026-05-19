@@ -9,7 +9,6 @@ primary_region = "iad"
 
 [[services]]
   internal_port = 8080
-  protocol = "http"
 
   [services.concurrency]
     hard_limit = 100
@@ -17,7 +16,6 @@ primary_region = "iad"
 
   [[services.ports]]
     port = 80
-    handlers = ["http"]
 
   [[services.checks]]
     path = "/"
