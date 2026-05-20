@@ -1,0 +1,1 @@
+(function(){"use strict";function a(e){return Array.from(e,s=>s.toString(16).padStart(2,"0")).join("")}self.addEventListener("message",async e=>{const{id:s,data:n}=e.data;try{const t=await crypto.subtle.digest("SHA-1",n),r=a(new Uint8Array(t));self.postMessage({id:s,hash:r})}catch(t){const r=t instanceof Error?t.message:String(t);self.postMessage({id:s,error:r})}})})();

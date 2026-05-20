@@ -1,4 +1,6 @@
-onlyBuiltDependencies:
-  - "dreamland"
+onlyBuiltDependencies: '[]'
 allowBuilds:
-  - "dreamland"
+  '0': dreamland
+  '1': esbuild
+  '2': rollup
+  esbuild: set this to true or false

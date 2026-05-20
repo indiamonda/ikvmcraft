@@ -52,7 +52,7 @@ serve: build
 	cd frontend && pnpm dev
 
 publish: build
-	cd frontend && pnpm build
+	cd frontend && pnpm install && pnpm build
 
 dotnetclean:
 	rm -rvf loader/{bin,obj} || true
